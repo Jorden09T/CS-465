@@ -1,16 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app_server",
-    "\\app_server\\controllers",
-    "\\app_server\\models",
-    "\\app_server\\routes",
-    "\\app_server\\views",
-    "\\app_server\\views\\layout",
-    "\\app_server\\views\\partials",
-    "\\bin",
-    "\\css"
+    "\\app_api",
+    "\\app_api\\config",
+    "\\app_api\\controllers",
+    "\\app_api\\models",
+    "\\app_api\\routes"
   ],
-  "SelectedNode": "\\app_server\\models\\travlr.js",
   "PreviewInSolutionExplorer": false
 }

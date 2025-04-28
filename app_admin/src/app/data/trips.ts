@@ -1,6 +1,6 @@
-export const trips = [
-  {
-    "1": {
+export const trips =
+  [
+    {
       "code": "GALR210214",
       "name": "Gale Reef",
       "length": "4 nights / 5 days",
@@ -8,27 +8,26 @@ export const trips = [
       "resort": "Emerald Bay, 3 stars",
       "perPerson": "799.00",
       "image": "reef1.jpg",
-      "description": "<p> Gale Reef Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis."
+      "description": "<p>Gale Reef Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. <p>Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam convallis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet. "
     },
-    "2": {
-      "code": "DAWR210135",
-      "name": "Dawson’s Reef",
+    {
+      "code": "DAWR210315",
+      "name": "Dawson's Reef",
       "length": "4 nights / 5 days",
       "start": "2021-03-15T08:00:00Z",
       "resort": "Blue Lagoon, 4 stars",
       "perPerson": "1199.00",
       "image": "reef2.jpg",
-      "description": "<p> Dawson's Reef Integer magna leo, posuere et dignissim vitae, porttitor at odio. Pellentesque a metus nec magna placerat volutpat. Nunc nisi mi, elementum sit amet aliquet quis, tristique quis nisl. Curabitur odio lacus, blandit ut hendrerit"
+      "description": "<p>Dawson's Reef Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. <p>Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam convallis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet. "
     },
-    "3": {
-      "code": "CLAR210621",
-      "name": "Claire’s REEF",
+    {
+      "code": "LAWR210214",
+      "name": "Lawrence's Reef",
       "length": "4 nights / 5 days",
       "start": "2021-06-21T08:00:00Z",
       "resort": "Coral Sands, 5 stars",
       "perPerson": "1999.00",
       "image": "reef3.jpg",
-      "description": "<p> Claire's Reef Donec sed felis risus. Nulla facilisi. Donec a orci tellus, et auctor odio. Fusce ac orci nibh, quis semper arcu. Cras orci neque, euismod et accumsan ac, sagittis molestie lorem. Proin odio sapien, elementum at tempor non."
+      "description": "<p>Lawrence's Reef Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. <p>Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam convallis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet. "
     }
-  }
-];
+  ]

@@ -1,59 +1,49 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-//import { trips } from '../data/trips';
-import { TripCardComponent } from '../trip-card/trip-card.component';
-
+import { Router } from "@angular/router";
+// import { trips } from '../data/trips';
 import { TripDataService } from '../services/trip-data.service';
 import { Trip } from '../models/trip';
-
-import { Router } from '@angular/router';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-trip-listing',
-  standalone: true,
-  imports: [CommonModule, TripCardComponent],
   templateUrl: './trip-listing.component.html',
-  styleUrl: './trip-listing.component.css',
+  styleUrls: ['./trip-listing.component.css'],
   providers: [TripDataService]
 })
 
 export class TripListingComponent implements OnInit {
-  //trips: Array<any> = trips;
+
   trips!: Trip[];
-  message: string = '';
+  message!: string;
 
   constructor(
     private tripDataService: TripDataService,
+    private authService: AuthenticationService,
     private router: Router
-  ) {
-    console.log('trip-listing constructor');
-  }
+  ) { }
 
   public addTrip(): void {
+    console.log('Inside trip-listing Component #AddTrip');
     this.router.navigate(['add-trip']);
   }
 
-  private getStuff(): void {
-    this.tripDataService.getTrips()
-      .subscribe({
-        next: (value: any) => {
-          this.trips = value;
-          if (value.length > 0) {
-            this.message = 'There are ' + value.length + ' trips available.';
-          }
-          else {
-            this.message = 'There were no trips retrieved from the database';
-          }
-          console.log(this.message);
-        },
-        error: (error: any) => {
-          console.log('Error: ' + error);
-        }
-      })
-  } 
+  public getTrips(): void {
+    console.log('Inside trip-listing Component #GetTrips');
+    this.message = 'Searching for trips';
+    this.tripDataService
+      .getTrips()
+      .then(foundTrips => {
+        this.message = foundTrips.length > 0 ? '' : 'No trips found';
+        this.trips = foundTrips;
+      });
+  }
+
+  public isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
 
   ngOnInit(): void {
-    console.log('ngOnInit');
-    this.getStuff();
+    this.getTrips();
   }
 }

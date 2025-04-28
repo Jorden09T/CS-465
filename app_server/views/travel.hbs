@@ -9,27 +9,28 @@
 <body>
 	<div id="background">
 		<div id="page">
-			{{> header}}
+			{{> header }}
+
 			<div id="contents">
 				<div class="box">
 					<div>
 						<div class="body">
 							<h1>Travel</h1>
 							<ul id="sites">
-			{{#each trips}}
+								{{#each trips}}
 								<li>
-									<a href="/travel"><img src="image/{{this.image}}" alt="Img" /></a>
+									<a href="/api/trips/{{this.code}}"><img src="images/{{this.image}}" alt="Img"></a>
 									<h2><a href="/travel">{{this.name}}</a></h2>
-									{{{this.description}}}
+									{{this.description}}
 								</li>
-			{{/each}}
+								{{/each}}
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		{{> footer}}
+		{{> footer }}
 	</div>
 </body>
 </html>
